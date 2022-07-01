@@ -1,6 +1,6 @@
 import os
 
-# from wsgiref.simple_server import make_server
+from wsgiref.simple_server import make_server
 from wsgi_static_middleware import StaticMiddleware
 
 from simba_framework.main import Framework
@@ -17,6 +17,6 @@ app_static = StaticMiddleware(application,
                               static_root='staticfiles',
                               static_dirs=STATIC_DIRS)
 
-# with make_server('', 8080, app_static) as httpd:
-#     print("Запуск на порту 8080...")
-#     httpd.serve_forever()
+with make_server('', 8080, app_static) as httpd:
+    print("Запуск на порту 8080...")
+    httpd.serve_forever()

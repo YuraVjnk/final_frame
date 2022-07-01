@@ -4,7 +4,7 @@ from requests import get
 
 def get_geo_info(environ, request):
     ip_addr = environ.get('REMOTE_ADDR', '')
-    ip_addr = '176.115.102.110'
+    # ip_addr = '176.115.102.110'
 
     if ip_addr:
         request_url = 'https://geolocation-db.com/jsonp/' + ip_addr

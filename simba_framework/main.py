@@ -3,6 +3,7 @@ import quopri
 from simba_framework.framework_requests import GetRequests, PostRequests, GetRequestClass
 from components.routing import Router
 
+
 class PageNotFound404:
     def __call__(self, request):
         return '404 WHAT', '404 PAGE NOT FOUND'
@@ -23,7 +24,6 @@ class Framework:
         # Добавляем слеш к адрессу
         if not path.endswith('/'):
             path = f'{path}/'
-
 
         # Получаем данные запроса
         method = environ['REQUEST_METHOD']
