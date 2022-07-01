@@ -1,1 +1,1 @@
-web:gunicorn run:app_static
+web: gunicorn run:app_static
